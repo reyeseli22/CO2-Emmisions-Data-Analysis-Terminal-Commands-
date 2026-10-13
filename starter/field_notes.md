@@ -50,7 +50,7 @@ reconstruct it from memory at the end.
 
 ```bash
 # TODO: the commands you actually ran to set up this repo
-```
+cd <repo>
 
 ## 1. First look at the raw file
 
@@ -60,7 +60,8 @@ enough to see the shape of it without scrolling past everything.
 
 ```bash
 # TODO: a command that prints just the first 5 lines of the raw file
-```
+cd data
+```head -n 5 co2_emissions_2022.csv
 
 **Output:**
 _TODO: paste what you actually got_
