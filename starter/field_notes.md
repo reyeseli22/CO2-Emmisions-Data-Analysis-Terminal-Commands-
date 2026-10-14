@@ -72,7 +72,7 @@ Africa,,2022,1445862695,,1459.114
 Africa (GCP),,2022,,,1459.103
 Albania,ALB,2022,2827614,36171005594,4.498
 
-**What I notice:** There are 6 data types, the data is unstructured, separated by commas,Africa, Afghanistan, Albania, are 3 countries included.
+**What I notice:** There are 6 data types, the data is unstructured, separated by commas,Africa, Afghanistan, Albania, are 3 countries included although africa is not a country.
 
 ## 2. Column names
 
