@@ -120,7 +120,7 @@ A list/array is one group of values with no particular organization. A table sep
 
 State whether this dataset is structured or unstructured, and why.
 
-Semi-
+Structured because values are separated into rows and columns. However the quality of the data is poor, causing us to question whether it is semi/unstructured
 
 ## 5. Before you trust this data
 
@@ -132,27 +132,26 @@ You may need more than one command for this — piping (`|`) feeds one
 command's output into the next as input.
 
 ```bash
-# TODO: a command (or combination) that counts how many rows have a
-# BLANK iso_code
+cut -d',' -f2 co2_emissions_2022.csv|tail -n +2 | grep -c '^$'
 ```
 
 **Output:**
-_TODO_
+36
 
 ```bash
-# TODO: the same idea, but for the gdp column
+cut -d',' -f5 co2_emissions_2022.csv|tail -n +2 | grep -c '^$'
 ```
 
 **Output:**
-_TODO_
+89
 
 List **at least 2** specific things you'd want to know about how this
 dataset was collected, before trusting any conclusion drawn from it — ground
 at least one in the counts you just found.
 
 **My 2 concerns:**
-1. _TODO_
-2. _TODO_
+1. Various instances where continents or non-countries are listed
+2. Why are there so many missing values? 
 
 ## 6. Data-quality question for the source
 
@@ -161,7 +160,7 @@ phrase it as a real question you'd send to the data's source/maintainer. A
 good test: could they actually answer it with a concrete yes/no or fact —
 not "is this data good?"
 
-_TODO_
+I noticed that across 2 of 6 columns 125 values are missing and I can see more in the other column. Could this have resulted from an issue in the data collection process?
 
 ## 7. Something you're actually curious about
 
@@ -171,12 +170,17 @@ curious to explore using this data? Pick two specific countries you're
 curious to compare, and look up their full rows.
 
 ```bash
-# TODO: a command that finds a specific country's row by name (repeat for
-# a second country of your choice)
+grep -n "albania" co2_emissions_2022.csv
+grep -n "Africa" co2_emissions_2022
 ```
 
 **Output:**
-_TODO_
+5:Albania,ALB,2022,2827614,36171005594,4.498
+
+3:Africa,,2022,1445862695,,1459.114
+4:Africa (GCP),,2022,,,1459.103
+45:Central African Republic,CAF,2022,5098038,3752056621,0.377
+215:South Africa,ZAF,2022,62378417,723559323969,428.782
 
 **My question:** _TODO_
 
