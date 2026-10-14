@@ -49,8 +49,10 @@ this repo up (see `README.md`) — `git init`/clone, creating your
 reconstruct it from memory at the end.
 
 ```bash
-# TODO: the commands you actually ran to set up this repo
+git clone "https"
 cd <repo>
+touch .gitignore
+```
 
 ## 1. First look at the raw file
 
@@ -59,14 +61,18 @@ safe peek at it — not the whole 254-row file, just the **first 5 lines**,
 enough to see the shape of it without scrolling past everything.
 
 ```bash
-# TODO: a command that prints just the first 5 lines of the raw file
-cd data
-```head -n 5 co2_emissions_2022.csv
+cd data 
+head -n 5 co2_emissions_2022.csv
+```
 
 **Output:**
-_TODO: paste what you actually got_
+country,iso_code,year,population,gdp,co2
+Afghanistan,AFG,2022,40578847,53303471617,10.170
+Africa,,2022,1445862695,,1459.114
+Africa (GCP),,2022,,,1459.103
+Albania,ALB,2022,2827614,36171005594,4.498
 
-**What I notice:** _TODO — your raw observations, in your own words_
+**What I notice:** There are 6 data types, the data is unstructured, separated by commas,Africa, Afghanistan, Albania, are 3 countries included.
 
 ## 2. Column names
 
@@ -74,12 +80,12 @@ Next you want to see just the column names by themselves — one per line is
 a lot easier to scan than one long comma-separated row.
 
 ```bash
-# TODO: a command (or combination of commands) that prints just the header
-# row, one column name per line
+head -n 1 co2_emissions
 ```
 
+
 **Output:**
-_TODO_
+country,iso_code,year,population,gdp,co2
 
 ## 3. Column-by-column data type table
 
