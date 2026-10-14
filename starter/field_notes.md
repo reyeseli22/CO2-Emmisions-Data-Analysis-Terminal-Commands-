@@ -72,7 +72,7 @@ Africa,,2022,1445862695,,1459.114
 Africa (GCP),,2022,,,1459.103
 Albania,ALB,2022,2827614,36171005594,4.498
 
-**What I notice:** There are 6 data types, the data is unstructured, separated by commas,Africa, Afghanistan, Albania, are 3 countries included although africa is not a country. Africa is listed twice and one entry is missing a value in the second column (iso code)
+**What I notice:** There are 6 data types, the data is unstructured, separated by commas,Africa, Afghanistan, Albania, are 3 countries included although africa is not a country. Africa is listed twice and one entry is missing a value in the second column (iso)
 
 ## 2. Column names
 
@@ -102,25 +102,25 @@ Fill in the table from what you actually saw — not a guess from the column
 name alone:
 
 | Column | Inferred type | How I can tell |
-|---|---|---|
-| _TODO_ | _TODO_ | _TODO_ |
-| _TODO_ | _TODO_ | _TODO_ |
-| _TODO_ | _TODO_ | _TODO_ |
-| _TODO_ | _TODO_ | _TODO_ |
-| _TODO_ | _TODO_ | _TODO_ |
+|country|str|text|
+| iso_code | str | text, represents countries |
+| year | date| designates a specific time|
+| population | int| numbers representing numbers, no decimals |
+| gdp| int| Numbers are present, no decimals|
+| co2 | float | contains a "floating" decimal |
 
-**In your own words:** what's the actual difference between a list/array
+**In your own words:** A list/array is one group of values with no particular organization. A table separates values in to various lines and columns in a consistent formatwhat's the actual difference between a list/array
 and a table? (Not a definition you looked up — explain it the way you'd
 explain it to a friend who's never coded. No command needed for this one,
 just think about the table you just filled in above.)
 
-_TODO_
+A list/array is one group of values with no particular organization. A table separates values in to various lines and columns in a consistent format
 
 ## 4. Structured or unstructured?
 
 State whether this dataset is structured or unstructured, and why.
 
-_TODO_
+Semi-
 
 ## 5. Before you trust this data
 
