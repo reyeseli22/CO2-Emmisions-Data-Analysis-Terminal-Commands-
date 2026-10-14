@@ -72,7 +72,7 @@ Africa,,2022,1445862695,,1459.114
 Africa (GCP),,2022,,,1459.103
 Albania,ALB,2022,2827614,36171005594,4.498
 
-**What I notice:** There are 6 data types, the data is unstructured, separated by commas,Africa, Afghanistan, Albania, are 3 countries included although africa is not a country.
+**What I notice:** There are 6 data types, the data is unstructured, separated by commas,Africa, Afghanistan, Albania, are 3 countries included although africa is not a country. Africa is listed twice and one entry is missing a value in the second column (iso code)
 
 ## 2. Column names
 
@@ -95,8 +95,7 @@ row. Column numbers for reference: `country`=1, `iso_code`=2, `year`=3,
 `population`=4, `gdp`=5, `co2`=6.
 
 ```bash
-# TODO: a command that prints the first 6 values from a single column
-# (repeat this for at least 5 of the 6 columns, swapping in each column's number)
+awk -F',' '{print $1,$2,$3,$4,$5,$6}' co2_emissions_2022.csv | head -n 7
 ```
 
 Fill in the table from what you actually saw — not a guess from the column
