@@ -171,7 +171,7 @@ curious to compare, and look up their full rows.
 
 ```bash
 grep -n "albania" co2_emissions_2022.csv
-grep -n "Africa" co2_emissions_2022
+grep -n "Africa" co2_emissions_2022.csv
 ```
 
 **Output:**
@@ -182,7 +182,10 @@ grep -n "Africa" co2_emissions_2022
 45:Central African Republic,CAF,2022,5098038,3752056621,0.377
 215:South Africa,ZAF,2022,62378417,723559323969,428.782
 
-**My question:** _TODO_
+**My question:** 
+Africa is a continent why is it still reflected under countries 
+
+Both entries for africa are missing data in the same fields, why is that?
 
 ## 8. AI-literacy reflection
 
@@ -193,10 +196,10 @@ fact before relying on it professionally — specific enough that you could
 actually follow it, not "I'll be careful."
 
 **Risks:**
-1. _TODO_
-2. _TODO_
+1. One risk would be the AI output would be inaccurate or distorted. Because, the data quality is poor, it may be hard for the AI to have context for mistakes or missing values
+2. Another risk is hallucination, the AI may correlate things incorrectly and come to unreliable/innacurate conclusions. 
 
-**My rule:** _TODO_
+**My rule:** Always make sure the data set is clean and data quality is high before pushing to AI
 
 ## 9. Something that went wrong (and how you figured it out)
 
@@ -207,10 +210,10 @@ this at least once. Paste the actual command and what actually happened
 fix — not "I googled it and it worked."
 
 ```bash
-# TODO: a command that errored, or gave you unexpected results
+awk -F',' '{print $1,$2,$3,$4,$5,$6}' co2_emissions_2022.csv | head -n 7
 ```
 
 **What happened:**
-_TODO: the actual error message, or the unexpected output you got_
+This gave me the most issues, initially I did not add a space between the pipe and head, there was no error but the terminal continuously said "pipe>", Then I wanted 6 rows of data but when I put 
 
 **What it told me and how I fixed it:** _TODO_
