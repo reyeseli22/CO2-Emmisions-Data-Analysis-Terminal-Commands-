@@ -214,6 +214,6 @@ awk -F',' '{print $1,$2,$3,$4,$5,$6}' co2_emissions_2022.csv | head -n 7
 ```
 
 **What happened:**
-This gave me the most issues, initially I did not add a space between the pipe and head, there was no error but the terminal continuously said "pipe>", Then I wanted 6 rows of data but when I put 
+This gave me the most issues, initially I did not add a space between the pipe and head, there was no error but the terminal continuously said "pipe>", Then I wanted 6 rows of data but when I put "head -n 6 only the first 5 were printed. 
 
-**What it told me and how I fixed it:** _TODO_
+**What it told me and how I fixed it:The header was included as a line. I then changed to 7 to include the header and print 6 lines of data for each country
