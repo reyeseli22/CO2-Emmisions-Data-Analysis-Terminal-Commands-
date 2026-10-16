@@ -222,16 +222,14 @@ The dataset is structured, as we are able to navigate the information through pr
 
 ## 3. What I Found
 
-Throughout our initial inspection, we identified several observations that raise questions about the dataset's reliability.
-
-**Missing Data**
+Throughout our initial inspection, we identified several observations that raise questions about the dataset's reliability. One of the most significant was missing data
 
 One of the most significant findings was the substantial number of missing values throughout the dataset.
 
 We observed a total of 125 missing fields across two columns:
 
-- **iso_code:** 36 missing values
-- **gdp:** 89 missing values
+- Iso Code : 36 missing values
+- GDP 89 : missing values
 
 Beyond these two columns, there is also a significant amount of missing information throughout the remainder of the dataset.
 
@@ -273,5 +271,6 @@ This initial exploration reinforced the importance of questioning the quality an
 
 **AI-Literacy Takeaway**
 
-[Add your personal experience using AI during this assignment. For example, how AI helped you inspect or understand the data, whether you questioned any of its responses, and what you learned about the importance of independently verifying AI-generated findings.]
 
+
+I generally did not use AI in order to inspect this data set. The extent of my use of AI within this project 1. to understand and utilize terminal command to analyze ther data set and 2. Organizing my thoughts and reflections into a more organized and digestable way
